@@ -49,3 +49,10 @@ lookup "one" dict
 :load test.hs
 :reload
 ```
+
+#### Compiling files
+
+```
+stack ghc <filename>.hs
+stack ghc -- -dynamic test.hs
+```
