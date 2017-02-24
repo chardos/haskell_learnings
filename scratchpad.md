@@ -41,3 +41,11 @@ let dict = [("one", 1), ("two", 2), ("three", 3)]
 lookup "one" dict
 ```
 => Just 1
+
+
+#### Loading files
+
+```
+:load test.hs
+:reload
+```
