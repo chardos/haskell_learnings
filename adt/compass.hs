@@ -12,8 +12,16 @@
 data Compass = North | East | South | West
     deriving (Eq, Ord, Enum, Show)
 
-succ North
+-- succ North
 -- prints East
 
-North < East
+-- North < East
 -- prints True
+
+-- [North .. South]
+-- prints [North,East,South]
+
+
+
+data Status = Unstarted | Started | Completed | Reviewing | Reviewed
+    deriving (Eq, Ord, Enum, Show)
