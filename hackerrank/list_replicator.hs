@@ -1,14 +1,11 @@
 import Data.List
 import Data.Char
 
-repeatedList n list = take (length list * n) (cycle list)
+f n list = sort (take (length list * n) (cycle list))
 
-printList [] = putStrLn ""
-printList (x:xs) = do
-    putStrLn ([intToDigit x])
-    printList xs
 
-f n list = do
-    let newList = sort (repeatedList n list)
-    printList newList
-    return newList
+-- Terrys solutions
+-- f n arr = concatMap (\a -> map (\_ -> a) [1..n]) arr
+-- f n arr = concatMap (\a -> take n (cycle [a])) arr
+-- f n as = foldr (\a acc -> acc ++ take n (repeat a)) [] as
+-- f n arr  = concatMap (replicate n) arr
